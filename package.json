@@ -7,13 +7,13 @@
   "typings": "./build/index.d.ts",
   "exports": {
     ".": {
+      "types": "./build/index.d.ts",
       "import": "./build/index.mjs",
-      "require": "./build/index.js",
-      "types": "./build/index.d.ts"
+      "require": "./build/index.js"
     }
   },
   "scripts": {
-    "build": "tsc --emitDeclarationOnly --declaration && node build.mjs",
+    "build": "tsc --emitDeclarationOnly && node build.mjs",
     "test": "mocha --require ts-node/register test/**.test.ts --timeout 15000",
     "prepublishOnly": "npm run build"
   },
