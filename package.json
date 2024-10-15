@@ -8,13 +8,15 @@
   "exports": {
     ".": {
       "import": "./build/index.mjs",
-      "require": "./build/index.js"
+      "require": "./build/index.js",
+      "types": "./build/index.d.ts"
     }
   },
   "scripts": {
     "build": "tsc --emitDeclarationOnly && node build.mjs",
     "test": "mocha --require ts-node/register test/**.test.ts --timeout 15000",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postinstall": "npm run build"
   },
   "files": [
     "build",
