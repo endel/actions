@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "tsc --emitDeclarationOnly && node build.mjs",
+    "build": "tsc --emitDeclarationOnly --declaration && node build.mjs",
     "test": "mocha --require ts-node/register test/**.test.ts --timeout 15000",
     "prepublishOnly": "npm run build",
     "postinstall": "npm run build"
